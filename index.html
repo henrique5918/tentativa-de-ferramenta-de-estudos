@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramenta de Estudos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .question {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+        .answer {
+            display: none;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-left: 4px solid #007BFF;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ferramenta de Estudos</h1>
+
+<div class="question" onclick="toggleAnswer('answer1')">O que é HTML?</div>
+<div id="answer1" class="answer">HTML (HyperText Markup Language) é a linguagem padrão para criar páginas da web.</div>
+
+<div class="question" onclick="toggleAnswer('answer2')">O que é CSS?</div>
+<div id="answer2" class="answer">CSS (Cascading Style Sheets) é uma linguagem de estilo utilizada para descrever a apresentação de um documento HTML.</div>
+
+<div class="question" onclick="toggleAnswer('answer3')">O que é JavaScript?</div>
+<div id="answer3" class="answer">JavaScript é uma linguagem de programação que permite implementar funcionalidades complexas em páginas da web.</div>
+
+<script>
+    function toggleAnswer(answerId) {
+        var answer = document.getElementById(answerId);
+        if (answer.style.display === "none" || answer.style.display === "") {
+            answer.style.display = "block";
+        } else {
+            answer.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
